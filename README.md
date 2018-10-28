@@ -11,6 +11,7 @@ Follow the given steps to proceed with project build:
 - Right click on solution and press "Enable NuGet package Restore"
 - Build the project
 
-In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please add references of missing APIs manually.
+In other case, it is possible that Visual Studio is unable to automatically add APIs references due to Visual Studio version differences. In this case, please read the following [documentation].
 
 [GroupDocs Dashboard]: <https://dashboard.groupdocs.cloud/#/apps>
+[documentation]: <https://github.com/syedaliraza3/Pdf_Converter_Final/wiki/How-to-Run-Application>
