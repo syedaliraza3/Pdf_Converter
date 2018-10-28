@@ -14,8 +14,8 @@ public partial class Index : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //TODO: Get your AppSID and AppKey at https://dashboard.groupdocs.cloud (free registration is required).
-        Common.MyAppSid = "c0b3eeb4-0657-443e-9c7a-e091751caf78";
-        Common.MyAppKey = "653f7447197241950c59845db523af13";
+        Common.MyAppSid = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";
+        Common.MyAppKey = "xxxxxxxxxxxxxxxxxxx";
 
         // Uploading sample test files from local to default storage under folder 'conversions'
         Common.UploadSampleTestFiles();
