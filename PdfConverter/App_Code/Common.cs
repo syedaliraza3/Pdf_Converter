@@ -25,21 +25,13 @@ public static class Common
         var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../Data");
 
         var dirs = Directory.GetDirectories(path, "*", SearchOption.AllDirectories);
-        try
+        foreach (var dir in dirs)
         {
-            foreach (var dir in dirs)
-            {
-                var relativeDirPath = dir.Replace(path, string.Empty).Trim(Path.DirectorySeparatorChar);
+            var relativeDirPath = dir.Replace(path, string.Empty).Trim(Path.DirectorySeparatorChar);
 
-                var response = storageApi.IsExist(relativeDirPath);
-                if (!response.FileExist.IsExist)
-                    storageApi.CreateFolder(relativeDirPath);
-            }
-        }
-        catch (Exception e)
-        {
-
-            throw;
+            var response = storageApi.IsExist(relativeDirPath);
+            if (!response.FileExist.IsExist)
+                storageApi.CreateFolder(relativeDirPath);
         }
 
         var files = Directory.GetFiles(path, "*", SearchOption.AllDirectories);
