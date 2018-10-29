@@ -31,13 +31,13 @@ public partial class Index : System.Web.UI.Page
         //populating the Panel A list with source file names.
         sourceList.DataSource = sourceFiles;
         sourceList.DataBind();
-        getDestinationList();
+        GetDestinationList();
     }
 
     /// <summary>
     /// This function is executed when the convert button is clicked.
     /// </summary>
-    protected void convertToPDF_Click(object sender, EventArgs e)
+    protected void ConvertToPDF_Click(object sender, EventArgs e)
     {
         //Getting all the file paths from input directory
         string[] sourceFileArray = Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../Data/input_dir"));
@@ -50,7 +50,7 @@ public partial class Index : System.Web.UI.Page
         }
 
         //population the Panel B with destination file names.
-        getDestinationList();
+        GetDestinationList();
 
         //To prevent execution of function on refreshing the page.
         Response.Redirect(Request.Url.AbsoluteUri);
@@ -59,7 +59,7 @@ public partial class Index : System.Web.UI.Page
     /// <summary>
     /// This function populates the Panel B List.
     /// </summary>
-    protected void getDestinationList()
+    protected void GetDestinationList()
     {
         //Getting all the file paths from input directory.
         string[] destinationFileArray = Directory.GetFiles(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"../Data/output_dir"));

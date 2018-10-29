@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Conversion.Cloud.Sdk", "GroupDocs.Conversion.Cloud.Sdk\GroupDocs.Conversion.Cloud.Sdk.csproj", "{13284D1A-8B08-469A-A58B-5C94B92C68E7}"
-EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PdfConverter", "PdfConverter\", "{24327025-11AE-40D2-8DEB-F61B549AB7D6}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
@@ -28,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PdfConverter", "PdfConverte
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupDocs.Conversion.Cloud.Sdk", "GroupDocs.Conversion.Cloud.Sdk\GroupDocs.Conversion.Cloud.Sdk.csproj", "{13284D1A-8B08-469A-A58B-5C94B92C68E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,14 +36,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|x86.ActiveCfg = Debug|x86
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|x86.Build.0 = Debug|x86
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|x86.ActiveCfg = Release|x86
-		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|x86.Build.0 = Release|x86
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -52,6 +44,14 @@ Global
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Release|x86.ActiveCfg = Debug|Any CPU
 		{24327025-11AE-40D2-8DEB-F61B549AB7D6}.Release|x86.Build.0 = Debug|Any CPU
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|x86.ActiveCfg = Debug|x86
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Debug|x86.Build.0 = Debug|x86
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|x86.ActiveCfg = Release|x86
+		{13284D1A-8B08-469A-A58B-5C94B92C68E7}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
