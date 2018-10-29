@@ -53,7 +53,7 @@
                     </td>
                     <td class="auto-style2">
                         <div align="center">
-                            <asp:Button CssClass="convertBtn" ID="convertToPDF" runat="server" Text="Convert >" OnClick="convertToPDF_Click" Height="37px" Width="92px" />
+                            <asp:Button CssClass="convertBtn" ID="convertToPDF" runat="server" Text="Convert >" OnClick="ConvertToPDF_Click" Height="37px" Width="92px" />
                         </div>
                     </td>
                     <td class="auto-style3">
