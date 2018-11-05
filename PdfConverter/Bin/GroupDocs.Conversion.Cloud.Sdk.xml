@@ -1,0 +1,2061 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GroupDocs.Conversion.Cloud.Sdk</name>
+    </assembly>
+    <members>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.ApiException">
+            <summary>
+            API exception.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.ApiException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.ApiException"/> class.
+            </summary>
+            <param name="errorCode">
+            The error code.
+            </param>
+            <param name="message">
+            The message.
+            </param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.ApiException.ErrorCode">
+            <summary>
+            Error code.
+            </summary>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.AuthType">
+            <summary>
+            Supported types of authentication.
+            </summary>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Api.AuthType.OAuth2">
+            <summary>
+            OAuth2.0
+            </summary>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Api.AuthType.RequestSignature">
+            <summary>
+            Authentication with signing of URL.
+            </summary>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration">
+            <summary>
+            Represents a set of configuration settings.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration.ApiBaseUrl">
+            <summary>
+            GroupDocs Cloud API base URL.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration.AppKey">
+            <summary>
+            The app key.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration.AppSid">
+            <summary>
+            The app sid.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration.DebugMode">
+            <summary>
+            Gets or sets a value indicating whether debug mode.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Api.Configuration.AuthType">
+            <summary>
+            Authentication type.
+            Default is OAuth 2.0
+            </summary>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi">
+            <summary>
+            Storage API
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi"/> class.
+            </summary>
+            <param name="apiKey">
+            The api Key.
+            </param>
+            <param name="appSid">
+            The app Sid.
+            </param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.#ctor(GroupDocs.Conversion.Cloud.Sdk.Api.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.ConversionApi"/> class.
+            </summary>    
+            <param name="configuration">Configuration settings</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.CreateFile(System.String,System.String,System.Byte[])">
+            <summary>
+            Creates file.
+            </summary>        
+            <param name="fileName">The file name.</param>
+            <param name="folder">The folder.</param>
+            <param name="bytes">Bytes.</param>
+            <returns>The response message.</returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.CreateFolder(System.String)">
+            <summary>
+            Creates folder.
+            </summary>
+            <param name="folder">Folder.</param>
+            <returns>Message</returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.DeleteFolder(System.String)">
+            <summary>
+            Removes folder.
+            </summary>
+            <param name="folder">Folder.</param>
+            <returns>Message</returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Api.StorageApi.IsExist(System.String)">
+            <summary>
+            Checks is file exists
+            </summary>
+            <param name="path">Path.</param>
+            <returns>Message</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.ConversionApi">
+            <summary>
+            GroupDocs.Conversion for Cloud API.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.ConversionApi"/> class.
+            </summary>
+            <param name="apiKey">
+            The api Key.
+            </param>
+            <param name="appSid">
+            The app Sid.
+            </param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.#ctor(GroupDocs.Conversion.Cloud.Sdk.Api.Configuration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.ConversionApi"/> class.
+            </summary>    
+            <param name="configuration">Configuration settings</param>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToCells(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest)">
+            <summary>
+            Returns CELLS document, result of conversion of the source file, specified by the provided CellsConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToCellsStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest)">
+            <summary>
+            Returns CELLS stream, result of conversion of the source file, specified by the provided CellsConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToHtml(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest)">
+            <summary>
+            Returns HTML document, result of conversion of the source file, specified by the provided HtmlConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToHtmlStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest)">
+            <summary>
+            Returns HTML stream, result of conversion of the source file, specified by the provided HtmlConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToImage(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest)">
+            <summary>
+            Returns IMAGE document, result of conversion of the source file, specified by the provided ImageConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToImageStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest)">
+            <summary>
+            Returns IMAGE stream, result of conversion of the source file, specified by the provided ImageConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToPdf(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest)">
+            <summary>
+            Returns PDF document, result of conversion of the source file, specified by the provided PdfConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToPdfStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest)">
+            <summary>
+            Returns PDF stream, result of conversion of the source file, specified by the provided PdfConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToSlides(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest)">
+            <summary>
+            Returns SLIDES document, result of conversion of the source file, specified by the provided SlidesConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToSlidesStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest)">
+            <summary>
+            Returns SLIDES stream, result of conversion of the source file, specified by the provided SlidesConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToWords(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest)">
+            <summary>
+            Returns WORDS document, result of conversion of the source file, specified by the provided WordsConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.ConvertToWordsStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest)">
+            <summary>
+            Returns WORDS stream, result of conversion of the source file, specified by the provided WordsConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.GetAllPossibleConversions(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetAllPossibleConversionsRequest)">
+            <summary>
+            Retrieves all possible conversions 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetAllPossibleConversionsRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.AllPossibleConversionsResponse"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.GetPossibleConversionsForFileType(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest)">
+            <summary>
+            Retrieves all possible conversions for the specified file type 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.PossibleConversionsForDocument(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest)">
+            <summary>
+            Retrieves all possible conversions for the specified document type. Document is passed in request body 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.QuickConvert(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest)">
+            <summary>
+            Returns document, result of conversion of the source file, specified by the provided QuickConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest" /></param>
+            <returns><see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.ConversionApi.QuickConvertToStream(GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest)">
+            <summary>
+            Returns stream, result of conversion of the source file, specified by the provided QuickConversionSettings 
+            </summary>
+            <param name="request">Request. <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest" /></param>
+            <returns><see cref="T:System.IO.Stream"/></returns>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Internal.SerializationHelper.JsonCreationConverter`1.Create(System.Type,Newtonsoft.Json.Linq.JObject)">
+            <summary>
+            Create an instance of objectType, based properties in the JSON object.
+            </summary>
+            <param name="objectType">type of object expected.</param>
+            <param name="jsonObject">
+            Contents of JSON object that will be deserialized.
+            </param>
+            <returns>An instance of objectType.</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.AllPossibleConversionsResponse">
+            <summary>
+            All Possible conversions response class
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.AllPossibleConversionsResponse.Conversions">
+            <summary>
+            All possible conversions. List of PossibleConversionResponse
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.AllPossibleConversionsResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.BaseConversionRequest">
+            <summary>
+            BaseConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.BaseConversionRequest.SourceFile">
+            <summary>
+            The source name
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.BaseConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CadOptionsDto">
+            <summary>
+            Cad Options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadOptionsDto.Width">
+            <summary>
+            Set desired page width for converting CAD document
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadOptionsDto.Height">
+            <summary>
+            Set desired page height for converting CAD document
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CadOptionsDto.LayoutNames">
+            <summary>
+            Render specific CAD layouts
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CadOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CellsConversionRequest">
+            <summary>
+            CellConversionRequest 
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CellsConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto">
+            <summary>
+            Options for converting Cells documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.ShowGridLines">
+            <summary>
+            Show grid lines when converting Excel files
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.ShowHiddenSheets">
+            <summary>
+            Show hidden sheets when converting Excel files
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.OnePagePerSheet">
+            <summary>
+            If OnePagePerSheet is true the content of the sheet will be converted to one page in the PDF document. Default value is true.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.OptimizePdfSize">
+            <summary>
+            If True and converting to Pdf the conversion is optimized for better file size than print quality
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.ConvertRange">
+            <summary>
+            Convert specific range when converting to other than cells format. Example: \"D1:F8\"
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.SkipEmptyRowsAndColumns">
+            <summary>
+            Skips empty rows and columns when converting. Default is True.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CellsOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto">
+            <summary>
+            Cells save options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum">
+            <summary>
+            Get or set the desired cells format 
+            </summary>
+            <value>Get or set the desired cells format </value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xls">
+            <summary>
+            Enum Xls for "Xls"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xlsx">
+            <summary>
+            Enum Xlsx for "Xlsx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xls2003">
+            <summary>
+            Enum Xls2003 for "Xls2003"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xlsm">
+            <summary>
+            Enum Xlsm for "Xlsm"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xlsb">
+            <summary>
+            Enum Xlsb for "Xlsb"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Ods">
+            <summary>
+            Enum Ods for "Ods"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Csv">
+            <summary>
+            Enum Csv for "Csv"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xltx">
+            <summary>
+            Enum Xltx for "Xltx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileTypeEnum.Xltm">
+            <summary>
+            Enum Xltm for "Xltm"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ConvertFileType">
+            <summary>
+            Get or set the desired cells format 
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.Password">
+            <summary>
+            Set this property if you want to protect the converted document with a password
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.CellsSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ConversionFileInfo">
+            <summary>
+            ConversionFileInfo dto
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConversionFileInfo.Folder">
+            <summary>
+            The folder
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConversionFileInfo.Name">
+            <summary>
+            The name
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ConversionFileInfo.Password">
+            <summary>
+            The password
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ConversionFileInfo.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.FileResponse">
+            <summary>
+            The empty type used as a flag.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.FileResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlConversionRequest">
+            <summary>
+            HtmlConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlSaveOptionsDto">
+            <summary>
+            Html save options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlSaveOptionsDto.UsePdf">
+            <summary>
+            If true, the input firstly is converted to PDF and after that to desired format
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlSaveOptionsDto.FixedLayout">
+            <summary>
+            If true fixed layout will be used e.g. absolutely positioned html elements Default:  true
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlSaveOptionsDto.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.HtmlSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConversionRequest">
+            <summary>
+            ImageConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ImageConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto">
+            <summary>
+            Image save options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+            <value>The desired file type to which the input document should be converted to</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Tiff">
+            <summary>
+            Enum Tiff for "Tiff"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Tif">
+            <summary>
+            Enum Tif for "Tif"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Jpg">
+            <summary>
+            Enum Jpg for "Jpg"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Jpeg">
+            <summary>
+            Enum Jpeg for "Jpeg"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Png">
+            <summary>
+            Enum Png for "Png"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Gif">
+            <summary>
+            Enum Gif for "Gif"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Bmp">
+            <summary>
+            Enum Bmp for "Bmp"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Ico">
+            <summary>
+            Enum Ico for "Ico"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Psd">
+            <summary>
+            Enum Psd for "Psd"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Webp">
+            <summary>
+            Enum Webp for "Webp"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Svg">
+            <summary>
+            Enum Svg for "Svg"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileTypeEnum.Jp2">
+            <summary>
+            Enum Jp2 for "Jp2"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ConvertFileType">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.Width">
+            <summary>
+            Desired image width after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.Height">
+            <summary>
+            Desired image height after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.UsePdf">
+            <summary>
+            If true, the input firstly is converted to PDF and after that to desired format
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.HorizontalResolution">
+            <summary>
+            Desired image horizontal resolution after conversion. The default resolution is the resolution of the input file or 96dpi
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.VerticalResolution">
+            <summary>
+            Desired image vertical resolution after conversion. The default resolution is the resolution of the input file or 96dpi
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.JpegQuality">
+            <summary>
+            Desired image quality when converting to Jpeg. The value must be between 0 and 100. The default value is 100.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.TiffOptions">
+            <summary>
+            Tiff specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.PsdOptions">
+            <summary>
+            Psd specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.WebpOptions">
+            <summary>
+            Webp specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.Grayscale">
+            <summary>
+            Convert to grayscale image
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.ImageSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Link">
+            <summary>
+            Provides information for the object link. This is supposed to be an atom:link, therefore it should have all attributes specified here http://tools.ietf.org/html/rfc4287#section-4.2.7
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Link.Href">
+            <summary>
+            The \"href\" attribute contains the link's IRI. atom:link elements MUST have an href attribute, whose value MUST be a IRI reference
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Link.Rel">
+            <summary>
+            atom:link elements MAY have a \"rel\" attribute that indicates the link relation type.  If the \"rel\" attribute is not present, the link element MUST be interpreted as if the link relation type is \"alternate\".
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Link.Type">
+            <summary>
+            On the link element, the \"type\" attribute's value is an advisory media type: it is a hint about the type of the representation that is expected to be returned when the value of the href attribute is dereferenced.  Note that the type attribute does not override the actual media type returned with the representation.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Link.Title">
+            <summary>
+            The \"title\" attribute conveys human-readable information about the link.  The content of the \"title\" attribute is Language-Sensitive.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Link.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConversionRequest">
+            <summary>
+            PdfConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto">
+            <summary>
+            Define Pdf optimization options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.LinkDuplicateStreams">
+            <summary>
+            Link duplcate streams
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.RemoveUnusedObjects">
+            <summary>
+            Remove unused objects
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.RemoveUnusedStreams">
+            <summary>
+            Remove unused streams
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.CompressImages">
+            <summary>
+            If CompressImages set to true, all images in the document are recompressed. The compression is defined by the ImageQuality property.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.ImageQuality">
+            <summary>
+            Value in percent where 100% is unchanged quality and image size. To decrease the image size, use ImageQuality less than 100             
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.UnembedFonts">
+            <summary>
+            Make fonts not embedded if set to true
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptimizationOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto">
+            <summary>
+            Pdf options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum">
+            <summary>
+            Set the pdf format of the converted document.
+            </summary>
+            <value>Set the pdf format of the converted document.</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.Default">
+            <summary>
+            Enum Default for "Default"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA1A">
+            <summary>
+            Enum PdfA1A for "PdfA_1A"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA1B">
+            <summary>
+            Enum PdfA1B for "PdfA_1B"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA2A">
+            <summary>
+            Enum PdfA2A for "PdfA_2A"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA3A">
+            <summary>
+            Enum PdfA3A for "PdfA_3A"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA2B">
+            <summary>
+            Enum PdfA2B for "PdfA_2B"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA2U">
+            <summary>
+            Enum PdfA2U for "PdfA_2U"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA3B">
+            <summary>
+            Enum PdfA3B for "PdfA_3B"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfA3U">
+            <summary>
+            Enum PdfA3U for "PdfA_3U"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.V13">
+            <summary>
+            Enum V13 for "v1_3"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.V14">
+            <summary>
+            Enum V14 for "v1_4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.V15">
+            <summary>
+            Enum V15 for "v1_5"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.V16">
+            <summary>
+            Enum V16 for "v1_6"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.V17">
+            <summary>
+            Enum V17 for "v1_7"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfX1A">
+            <summary>
+            Enum PdfX1A for "PdfX_1A"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormatEnum.PdfX3">
+            <summary>
+            Enum PdfX3 for "PdfX3"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.PdfFormat">
+            <summary>
+            Set the pdf format of the converted document.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.RemovePdfaCompliance">
+            <summary>
+            Remove Pdf-A Compliance
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.Linearize">
+            <summary>
+            Linearize PDF Document for the Web
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.OptimizationOptions">
+            <summary>
+            Pdf optimization options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.Grayscale">
+            <summary>
+            Convert a PDF from RGB colorspace to Grayscale
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto">
+            <summary>
+            Pdf save options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ConvertFileTypeEnum">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+            <value>The desired file type to which the input document should be converted to</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ConvertFileTypeEnum.Pdf">
+            <summary>
+            Enum Pdf for "Pdf"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ConvertFileTypeEnum.Epub">
+            <summary>
+            Enum Epub for "Epub"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ConvertFileTypeEnum.Xps">
+            <summary>
+            Enum Xps for "Xps"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ConvertFileType">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.Width">
+            <summary>
+            Desired page width in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.Height">
+            <summary>
+            Desired page height in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.Dpi">
+            <summary>
+            Desired page DPI after conversion. The default resolution is: 96dpi
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.Password">
+            <summary>
+            Set this property if you want to protect the converted document with a password
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.MarginTop">
+            <summary>
+            Desired page top margin in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.MarginBottom">
+            <summary>
+            Desired page bottom margin in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.MarginLeft">
+            <summary>
+            Desired page left margin in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.MarginRight">
+            <summary>
+            Desired page right margin in pixels after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.PdfOptions">
+            <summary>
+            Pdf specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.WordBookmarksOptions">
+            <summary>
+            If the input document is Word the conversion will handle the word bookmarks regarding this option.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PdfSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse">
+            <summary>
+            Possible conversions response class
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse.SourceFileType">
+            <summary>
+            Source FileType
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse.PossibleConversions">
+            <summary>
+            Array with possible conversions
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PossibleConversionResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto">
+            <summary>
+            Psd options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum">
+            <summary>
+            Psd color mode
+            </summary>
+            <value>Psd color mode</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Bitmap">
+            <summary>
+            Enum Bitmap for "Bitmap"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Grayscale">
+            <summary>
+            Enum Grayscale for "Grayscale"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Indexed">
+            <summary>
+            Enum Indexed for "Indexed"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Rgb">
+            <summary>
+            Enum Rgb for "Rgb"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Cmyk">
+            <summary>
+            Enum Cmyk for "Cmyk"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Multichannel">
+            <summary>
+            Enum Multichannel for "Multichannel"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Duotone">
+            <summary>
+            Enum Duotone for "Duotone"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorModeEnum.Lab">
+            <summary>
+            Enum Lab for "Lab"
+            </summary>            
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethodEnum">
+            <summary>
+            Psd compression method
+            </summary>
+            <value>Psd compression method</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethodEnum.Raw">
+            <summary>
+            Enum Raw for "Raw"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethodEnum.Rle">
+            <summary>
+            Enum Rle for "Rle"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethodEnum.ZipWithoutPrediction">
+            <summary>
+            Enum ZipWithoutPrediction for "ZipWithoutPrediction"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethodEnum.ZipWithPrediction">
+            <summary>
+            Enum ZipWithPrediction for "ZipWithPrediction"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ColorMode">
+            <summary>
+            Psd color mode
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.CompressionMethod">
+            <summary>
+            Psd compression method
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ChannelBitsCount">
+            <summary>
+            Bits count per color channel
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ChannelsCount">
+            <summary>
+            Color channels count
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.Version">
+            <summary>
+            Psd file version
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.PsdOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.QuickConversionRequest">
+            <summary>
+            QuickConversionSettings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.QuickConversionRequest.Format">
+            <summary>
+            required target format
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.QuickConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToCells" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.CellsConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToCellsStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.CellsConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToCellsStreamRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToHtml" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.HtmlConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToHtmlStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.HtmlConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToHtmlStreamRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToImage" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.ImageConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToImageStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.ImageConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToImageStreamRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToPdf" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.PdfConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest"/> class.
+            </summary>
+            <param name="request">The settings.</param>
+            <param name="outPath">outPath: path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest.Request">
+            <summary>
+            The settings.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfRequest.OutPath">
+            <summary>
+            outPath: path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToPdfStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.PdfConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings.</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToPdfStreamRequest.Request">
+            <summary>
+            The settings.
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToSlides" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.SlidesConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToSlidesStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.SlidesConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToSlidesStreamRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToWords" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.WordsConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.ConvertToWordsStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.WordsConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.ConvertToWordsStreamRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetAllPossibleConversionsRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.GetAllPossibleConversions" /> operation.
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.GetPossibleConversionsForFileType" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest"/> class.
+            </summary>
+            <param name="extension">File extension</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.GetPossibleConversionsForFileTypeRequest.Extension">
+            <summary>
+            File extension
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.PossibleConversionsForDocument" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest.#ctor(System.IO.Stream)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest"/> class.
+            </summary>
+            <param name="file">File contents.</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.PossibleConversionsForDocumentRequest.File">
+            <summary>
+            File contents.
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.QuickConvert" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.QuickConversionRequest,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest"/> class.
+            </summary>
+            <param name="request">The settings</param>
+            <param name="outPath">path to output document on file storage</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest.Request">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertRequest.OutPath">
+            <summary>
+            path to output document on file storage
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest">
+            <summary>
+            Request model for <see cref="!:GroupDocs.Conversion.Cloud.Sdk.Api.ConversionApi.QuickConvertToStream" /> operation.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest"/> class.
+            </summary>        
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest.#ctor(GroupDocs.Conversion.Cloud.Sdk.Model.QuickConversionRequest)">
+            <summary>
+            Initializes a new instance of the <see cref="T:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest"/> class.
+            </summary>
+            <param name="request">The settings.</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Requests.QuickConvertToStreamRequest.Request">
+            <summary>
+            The settings.
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExist">
+            <summary>
+            File exist.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExist.IsExist">
+            <summary>
+            Exist.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExist.IsFolder">
+            <summary>
+            Folder.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExist.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExistResponse">
+            <summary>
+            File exist response.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExistResponse.FileExist">
+            <summary>
+            File exists.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExistResponse.Code">
+            <summary>
+            The code.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExistResponse.Status">
+            <summary>
+            The status.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.FileExistResponse.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage">
+            <summary>
+            Response message.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.#ctor">
+            <summary>
+            ctor.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.#ctor(System.Byte[],System.Int32,System.String)">
+            <summary>
+            ctor.
+            </summary>
+            <param name="responseStream">The response stream.</param>
+            <param name="code">The code.</param>
+            <param name="status">The status.</param>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.Code">
+            <summary>
+            The code.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.Status">
+            <summary>
+            The status.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.Message">
+            <summary>
+            The message.
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.ResponseStream">
+            <summary>
+            The response stream.
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.Responses.ResponseMessage.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.RtfOptionsDto">
+            <summary>
+            Options for converting to RTF
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.RtfOptionsDto.ExportImagesForOldReaders">
+            <summary>
+            Specifies whether the keywords for \"old readers\" are written to RTF or not. This can significantly affect the size of the RTF document. Default is False.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.RtfOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto">
+            <summary>
+            Base options class
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.PageNumber">
+            <summary>
+            Start conversion from PageNumber page
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.NumPagesToConvert">
+            <summary>
+            Number of pages to convert
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.ConvertPages">
+            <summary>
+            Convert specific pages. The list contains the page indexes of the pages to be converted
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.WatermarkOptions">
+            <summary>
+            Watermark specific options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.HideWordTrackedChanges">
+            <summary>
+            Hide markup and track changes for Word documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.CadOptions">
+            <summary>
+            CAD specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.HidePdfAnnotations">
+            <summary>
+            Hide annotations in Pdf documents
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.HideComments">
+            <summary>
+            Hide comments during conversion if the source format support comments
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.CellsOptions">
+            <summary>
+            Cells specific convert options
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SaveOptionsBaseDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesConversionRequest">
+            <summary>
+            SlidesConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto">
+            <summary>
+            Slides save options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+            <value>The desired file type to which the input document should be converted to</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Ppt">
+            <summary>
+            Enum Ppt for "Ppt"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Pps">
+            <summary>
+            Enum Pps for "Pps"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Pptx">
+            <summary>
+            Enum Pptx for "Pptx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Ppsx">
+            <summary>
+            Enum Ppsx for "Ppsx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Odp">
+            <summary>
+            Enum Odp for "Odp"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Otp">
+            <summary>
+            Enum Otp for "Otp"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Potx">
+            <summary>
+            Enum Potx for "Potx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Potm">
+            <summary>
+            Enum Potm for "Potm"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Pptm">
+            <summary>
+            Enum Pptm for "Pptm"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileTypeEnum.Ppsm">
+            <summary>
+            Enum Ppsm for "Ppsm"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ConvertFileType">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.Password">
+            <summary>
+            Set this property if you want to protect the converted document with a password
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Powerpoint 2010. Starting from Microsoft Powerpoint 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.SlidesSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto">
+            <summary>
+            Tiff options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum">
+            <summary>
+            Set Tiff compression
+            </summary>
+            <value>Set Tiff compression</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum.Lzw">
+            <summary>
+            Enum Lzw for "Lzw"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum.None">
+            <summary>
+            Enum None for "None"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum.Ccitt3">
+            <summary>
+            Enum Ccitt3 for "Ccitt3"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum.Ccitt4">
+            <summary>
+            Enum Ccitt4 for "Ccitt4"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.CompressionEnum.Rle">
+            <summary>
+            Enum Rle for "Rle"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.Compression">
+            <summary>
+            Set Tiff compression
+            </summary>
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.TiffOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto">
+            <summary>
+            Watermark options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Text">
+            <summary>
+            Watermark text
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Font">
+            <summary>
+            Watermark font name
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Color">
+            <summary>
+            Watermark font color
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Width">
+            <summary>
+            Watermark width
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Height">
+            <summary>
+            Watermark height
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Top">
+            <summary>
+            Watermark top position
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Left">
+            <summary>
+            Watermark left position
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.RotationAngle">
+            <summary>
+            Watermark rotation angle
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Transparency">
+            <summary>
+            Watermark transparency. Value between 0 and 1. Value 0 is fully visible, value 1 is invisible.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Background">
+            <summary>
+            Indicates that the watermark is stamped as background. If the value is true, the watermark is layed at the bottom. By default is false and the watermark is layed on top.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.Image">
+            <summary>
+            Image watermark
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WatermarkOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WebpOptionsDto">
+            <summary>
+            Webp options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WebpOptionsDto.Lossless">
+            <summary>
+            Indicates if the compression of the converted file will be lossless
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WebpOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordBookmarksOptionsDto">
+            <summary>
+            Options for handling Bookmarks in Word to PDF conversions
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordBookmarksOptionsDto.BookmarksOutlineLevel">
+            <summary>
+            Specifies the default level in the document outline at which to display Word bookmarks. Default is 0. Valid range is 0 to 9.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordBookmarksOptionsDto.HeadingsOutlineLevels">
+            <summary>
+            Specifies how many levels of headings (paragraphs formatted with the Heading styles) to include in the document outline. Default is 0. Valid range is 0 to 9.
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordBookmarksOptionsDto.ExpandedOutlineLevels">
+            <summary>
+            Specifies how many levels in the document outline to show expanded when the file is viewed. Default is 0. Valid range is 0 to 9. Note that this options will not work when saving to XPS.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordBookmarksOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordsConversionRequest">
+            <summary>
+            WordsConversionRequest
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsConversionRequest.Options">
+            <summary>
+            The settings
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordsConversionRequest.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto">
+            <summary>
+            Words save options
+            </summary>  
+        </member>
+        <member name="T:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+            <value>The desired file type to which the input document should be converted to</value>
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Doc">
+            <summary>
+            Enum Doc for "Doc"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Docm">
+            <summary>
+            Enum Docm for "Docm"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Docx">
+            <summary>
+            Enum Docx for "Docx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Dot">
+            <summary>
+            Enum Dot for "Dot"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Dotm">
+            <summary>
+            Enum Dotm for "Dotm"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Dotx">
+            <summary>
+            Enum Dotx for "Dotx"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Rtf">
+            <summary>
+            Enum Rtf for "Rtf"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Txt">
+            <summary>
+            Enum Txt for "Txt"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Odt">
+            <summary>
+            Enum Odt for "Odt"
+            </summary>            
+        </member>
+        <member name="F:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileTypeEnum.Ott">
+            <summary>
+            Enum Ott for "Ott"
+            </summary>            
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ConvertFileType">
+            <summary>
+            The desired file type to which the input document should be converted to
+            </summary>
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.Width">
+            <summary>
+            Desired page width after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.Height">
+            <summary>
+            Desired page height after conversion
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.Dpi">
+            <summary>
+            Desired page DPI after conversion. The default resolution is: 96dpi
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.Password">
+            <summary>
+            Set this property if you want to protect the converted document with a password
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.RtfOptions">
+            <summary>
+            RTF specific convert options
+            </summary>  
+        </member>
+        <member name="P:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.Zoom">
+            <summary>
+            Specifies the zoom level in percentage. Default is 100. Default zoom is supported till Microsoft Word 2010. Starting from Microsoft Word 2013 default zoom is no longer set to document, instead it appears to use the zoom factor of the last document that was opened.
+            </summary>  
+        </member>
+        <member name="M:GroupDocs.Conversion.Cloud.Sdk.Model.WordsSaveOptionsDto.ToString">
+            <summary>
+            Get the string presentation of the object
+            </summary>
+            <returns>String presentation of the object</returns>
+        </member>
+    </members>
+</doc>
